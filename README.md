@@ -1,1 +1,1 @@
-- <a href="http://example.com/" target="_blank">example</a> on April 17th 2023
+- <a href="https://seddonym.me/2020/11/19/trouble-atomic/" target="_blank">Djangos `transaction.atomic` context manager can lead to unexpected behavior when dealing with database transactions</a> on April 17th 2023
