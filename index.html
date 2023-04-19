@@ -20,8 +20,16 @@
     }
 
     .is-medium {
-        background: linear-gradient(to top right, #110030 0.5%, #6c2afa);
+        background: linear-gradient(to top right, #1100306b 0.5%, #110030);
     }
+    ul {
+        list-style-type: disc;
+        margin-left: 1.5em;
+        }
+
+        li {
+        margin-bottom: 0.5em;
+        }
   </style>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -36,14 +44,50 @@
                         <i class="fas fa-laptop-code"></i> Benji
                     </h1>
                     <h2 class="subtitle">
-                        Backend Engineer @Octopus Energy
+                        Backend Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://octopus.energy/" target="_blank">@Octopus Energy</a>
                     </h2>
                 </div>
             </div>
         </section>
         <section class="section">
-            <div class="container">
-                <div class="columns">
+            <div class="columns is-desktop is-gapless">
+                <div class="column is-half-desktop">
+                    <h1 class="title">
+                        About me
+                    </h1>
+                    <div class="content">
+                        <p class="location-parent">
+                            <span class="icon">
+                                <i class="fas fa-map-marker-alt fa-lg"></i>
+                            </span>
+                            <span>London, UK.</span>
+                        </p>
+                        <p class="is-size-6">
+                            I engineer software to handle massive traffic,
+                            servicing millions of users. My code is robust,
+                            scalable, and simple to manage. I'm an ardent
+                            devotee of innovation, eager to explore fresh
+                            technologies and methodologies.
+                        </p>
+                        <p class="buttons">
+                            <button class="button"
+                                onclick="window.open('https://www.linkedin.com/in/benjamin-lo-6b0ba11a/');">
+                                <span class="icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </span>
+                                <span>Linkedin</span>
+                            </button>
+                            <button class="button"
+                                onclick="window.open('https://github.com/benji011');">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>GitHub</span>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-half-desktop">
                     <div class="container">
                         <h1 class="title">
                             TIL
@@ -51,76 +95,27 @@
                         <h2 class="subtitle is-size-6">
                             A curated list of things I've learned
                         </h2>
-                    </div>
-                    <br/>
-                </div>
-
-                <div class="py-5">
-                    <div id="readme"></div>
-                </div>
-                <br/>
-                <div class="columns">
-                    <div class="">
-                        <h1 class="title">
-                            About me
-                        </h1>
-                        <div class="content">
-                            <p class="location-parent">
-                                <span class="icon">
-                                    <i class="fas fa-map-marker-alt fa-lg"></i>
-                                </span>
-                                <span>London, UK.</span>
-                            </p>
-                            <p class="is-size-6">
-                                I engineer software to handle massive traffic,
-                                servicing millions of users. My code is robust,
-                                scalable, and simple to manage. I'm an ardent
-                                devotee of innovation, eager to explore fresh
-                                technologies and methodologies.
-                            </p>
-                            <p class="buttons">
-                                <button class="button"
-                                    onclick="window.open('https://www.linkedin.com/in/benjamin-lo-6b0ba11a/');">
-                                    <span class="icon">
-                                        <i class="fab fa-linkedin"></i>
-                                    </span>
-                                    <span>Linkedin</span>
-                                </button>
-                                <button class="button"
-                                    onclick="window.open('https://github.com/benji011');">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </button>
-                            </p>
-                        </div>
+                        <div id="readme"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="content has-text-centered">
-                    <p>
-                        <strong>My Name</strong><br>
-                        Full-stack Software Developer<br>
-                        <a href="mailto:myemail@example.com">myemail@example.com</a><br>
-                        <a href="https://github.com/mygithub">github.com/mygithub</a>
-                    </p>
-                    <p>
-                        Built with <a href="https://bulma.io/">Bulma</a> and <a
-                            href="https://marked.js.org/">marked</a>.<br>
-                        Source code available on <a
-                            href="https://github.com/mygithub/myportfolio">GitHub</a>.
-                    </p>
-                    <p>
-                        © 2023 My Name. All rights reserved.
-                    </p>
-                </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Benjamin Lo</strong><br>
+                    Software Engineer<br>
+                    <a href="https://github.com/benji011">github.com/benji011</a>
+                </p>
+                <p>
+                    © 2023 Benjamin Lo. All rights reserved.
+                </p>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-    </html>
-    <script type="module" src="/main.js"></script>
+</html>
+<script type="module" src="/main.js"></script>
