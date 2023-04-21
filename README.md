@@ -1,4 +1,4 @@
-* [The author of a meme suggesting to squash all commits into a single 'Legacy code' commit on the first day of a SWE role, works as the HOE at my company](https://twitter.com/codeinthehole/status/1029682224713617408?cxt=HHwWgMC2ueShlcocAAAA) on April 21, 2023
+* [The author of a tweet, suggesting on your first day to squash all commits into a single commit as legacy code then pushing to `master`, works as the HOE at my company](https://twitter.com/codeinthehole/status/1029682224713617408?cxt=HHwWgMC2ueShlcocAAAA) on April 21, 2023
 * [Python's default function arguments mutates for all future calls](https://docs.python-guide.org/writing/gotchas/#mutable-default-arguments) on April 21st 2023
 * [You can create a shell alias to show your local Git branches in a table instead of a long list](https://gist.github.com/benji011/8210b3eeda1b80935b87be3026c6a40e) on April 21st 2023
 
