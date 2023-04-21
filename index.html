@@ -1,121 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Benjamin Lo | Software Engineer</title>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    </head>
-    <meta charset="utf-8">
-
-    <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    main {
-        flex-grow: 1;
-    }
-
-    .is-medium {
-        background: linear-gradient(to top right, #1100306b 0.5%, #110030);
-    }
-    ul {
-        list-style-type: disc;
-        margin-left: 1.5em;
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Benjamin Lo | Software Engineer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css" media="screen">
+        .is-medium {
+            background: linear-gradient(to top right, #1100306b 0.5%, #110030);
+        }
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
         }
 
+        #wrapper {
+            flex: 1;
+        }
+        ul {
+            margin-left: 1.5em;
+        }
         li {
-        margin-bottom: 0.5em;
+            margin-bottom: 0.5em;
         }
-  </style>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <body>
-        <section class="hero is-medium is-link">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <h1 class="title">
-                        <i class="fas fa-laptop-code"></i> Benji
-                    </h1>
-                    <h2 class="subtitle">
-                        Backend Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://octopus.energy/" target="_blank">@Octopus Energy</a>
-                    </h2>
-                </div>
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+    <section class="hero is-medium is-link">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    <i class="fas fa-laptop-code"></i> Benji
+                </h1>
+                <h2 class="subtitle">
+                    Backend Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://octopus.energy/" target="_blank">@Octopus Energy</a>
+                </h2>
             </div>
-        </section>
-        <section class="section">
-            <div class="columns is-desktop is-gapless">
-                <div class="column is-half-desktop">
-                    <h1 class="title">
-                        About me
-                    </h1>
-                    <div class="content">
-                        <p class="location-parent">
+        </div>
+    </section>
+    <section class="section">
+        <div class="column">
+            <div class="container">
+                <h1 class="title">
+                    About me
+                </h1>
+                <div class="content">
+                    <p class="location-parent">
+                        <span class="icon">
+                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                        </span>
+                        <span>London, UK.</span>
+                    </p>
+                    <p class="is-size-6">
+                        I engineer software to handle massive traffic,
+                        servicing millions of users. My code is robust,
+                        scalable, and simple to manage. I'm an ardent
+                        devotee of innovation, eager to explore fresh
+                        technologies and methodologies.
+                    </p>
+                    <p class="buttons">
+                        <button class="button"
+                            onclick="window.open('https://www.linkedin.com/in/benjamin-lo-6b0ba11a/');">
                             <span class="icon">
-                                <i class="fas fa-map-marker-alt fa-lg"></i>
+                                <i class="fab fa-linkedin"></i>
                             </span>
-                            <span>London, UK.</span>
-                        </p>
-                        <p class="is-size-6">
-                            I engineer software to handle massive traffic,
-                            servicing millions of users. My code is robust,
-                            scalable, and simple to manage. I'm an ardent
-                            devotee of innovation, eager to explore fresh
-                            technologies and methodologies.
-                        </p>
-                        <p class="buttons">
-                            <button class="button"
-                                onclick="window.open('https://www.linkedin.com/in/benjamin-lo-6b0ba11a/');">
-                                <span class="icon">
-                                    <i class="fab fa-linkedin"></i>
-                                </span>
-                                <span>Linkedin</span>
-                            </button>
-                            <button class="button"
-                                onclick="window.open('https://github.com/benji011');">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>GitHub</span>
-                            </button>
-                        </p>
-                    </div>
+                            <span>Linkedin</span>
+                        </button>
+                        <button class="button"
+                            onclick="window.open('https://github.com/benji011');">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>GitHub</span>
+                        </button>
+                    </p>
                 </div>
-                <div class="column is-half-desktop">
-                    <div class="container">
-                        <h1 class="title">
-                            TIL
-                        </h1>
-                        <h2 class="subtitle is-size-6">
-                            A curated list of things I've learned
-                        </h2>
-                        <div id="readme"></div>
-                    </div>
+                <h1 class="title">
+                    TIL
+                </h1>
+                <h2 class="subtitle is-size-6">
+                    A curated list of things I've learned
+                </h2>
+                <div id="readme"></div>
                 </div>
             </div>
         </div>
     </section>
-
+    </div>
     <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>Benjamin Lo</strong><br>
-                    Software Engineer<br>
-                    <a href="https://github.com/benji011">github.com/benji011</a>
-                </p>
-                <p>
-                    © 2023 Benjamin Lo. All rights reserved.
-                </p>
-            </div>
-        </div>
+      <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © 2023 Benjamin Lo. All rights reserved.
+        </p>
+      </div>
     </footer>
-
+  </body>
 </html>
 <script type="module" src="/main.js"></script>
