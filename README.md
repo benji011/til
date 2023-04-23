@@ -1,3 +1,4 @@
+* [You can submit files to your default printer in OSX using the `lpr` command](https://ss64.com/osx/lpr.html) on April 23, 2023
 - [Using `==` to compare sensitive hashes leaves you open for timing attacks, use constant-time algorithm instead](https://codahale.com/a-lesson-in-timing-attacks/) on April 22, 2023
 - [The author of a tweet, suggesting on your first day to squash all commits into a single commit as legacy code then pushing to `master`, works as the Head of Engineering at my company](https://twitter.com/codeinthehole/status/1029682224713617408?cxt=HHwWgMC2ueShlcocAAAA) on April 21, 2023
 - [Python's default function arguments mutates for all future calls](https://docs.python-guide.org/writing/gotchas/#mutable-default-arguments) on April 21st 2023
