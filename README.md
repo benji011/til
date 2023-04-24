@@ -1,4 +1,4 @@
-* [You can format JSON into a table with `jq`](https://stackoverflow.com/questions/39139107/how-to-format-a-json-string-as-a-table-using-jq/39144364#39144364) on April 24, 2023
+* [You can format JSON into a table with `jq` and `column`](https://til.codeinthehole.com/posts/how-to-format-json-into-a-table-with-jq-and-column/) on April 24, 2023
 * [You can submit files to your default printer in OSX using the `lpr` command](https://ss64.com/osx/lpr.html) on April 23, 2023
 - [Using `==` to compare sensitive hashes leaves you open for timing attacks, use constant-time algorithm instead](https://codahale.com/a-lesson-in-timing-attacks/) on April 22, 2023
 - [The author of a tweet, suggesting on your first day to squash all commits into a single commit as legacy code then pushing to `master`, works as the Head of Engineering at my company](https://twitter.com/codeinthehole/status/1029682224713617408?cxt=HHwWgMC2ueShlcocAAAA) on April 21, 2023
