@@ -1,3 +1,4 @@
+* [焼肉 refers to roasted pork belly in Cantonese, while in Japanese it is a general term for BBQ](https://www.duhoctrungquoc.vn/wiki/ja/%E7%84%BC%E8%82%89_%28%E5%BA%83%E6%9D%B1%E6%96%99%E7%90%86%29) on May 14, 2023
 * [Sentry.io has a 'User Misery' metrics](https://docs.sentry.io/product/performance/metrics/#user-misery) on May 12, 2023
 * [You can use minikube as a Docker Desktop replacement](https://minikube.sigs.k8s.io/docs/tutorials/docker_desktop_replacement/) on May 10, 2023
 * [You can play background noises on MacOS Venture & iOS 15+](https://support.apple.com/en-gb/HT212775) on April 29, 2023
