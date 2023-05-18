@@ -1,3 +1,4 @@
+* [Using `xyz.objects.get()` with `Q` unexpectedly returns multiple objects](https://dev.to/benji011/using-xyzobjectsget-with-q-unexpectedly-returns-multiple-objects-5fme) on May 18, 2023
 * [Starbucks operates more closely as a bank than a coffee shop via gift cards](https://fttembeddedfinance.com/starbucks-banking-serving-coffee/#:~:text=85%25%20of%20US%20banks%20have,in%20low%20risk%20government%20bonds) on May 17, 2023
 * [HTMX is way faster than writing AJAX logic directly inside a Django template](https://dev.to/benji011/til-htmx-is-way-faster-than-writing-ajax-logic-directly-inside-a-django-template-neb) on May 15, 2023
 * [焼肉 refers to roasted pork belly in Cantonese, while in Japanese it is a general term for BBQ](https://www.duhoctrungquoc.vn/wiki/ja/%E7%84%BC%E8%82%89_%28%E5%BA%83%E6%9D%B1%E6%96%99%E7%90%86%29) on May 14, 2023
