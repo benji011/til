@@ -1,3 +1,4 @@
+* [You can trick Mypys typechecker using `typing.cast`](https://dev.to/benji011/til-you-can-trick-mypys-typechecker-using-typingcast-218b) on May 24, 2023
 * [Using `xyz.objects.get()` with `Q` unexpectedly returns multiple objects](https://dev.to/benji011/using-xyzobjectsget-with-q-unexpectedly-returns-multiple-objects-5fme) on May 18, 2023
 * [Starbucks operates more closely as a bank than a coffee shop via gift cards](https://fttembeddedfinance.com/starbucks-banking-serving-coffee/#:~:text=85%25%20of%20US%20banks%20have,in%20low%20risk%20government%20bonds) on May 17, 2023
 * [HTMX is way faster than writing AJAX logic directly inside a Django template](https://dev.to/benji011/til-htmx-is-way-faster-than-writing-ajax-logic-directly-inside-a-django-template-neb) on May 15, 2023
