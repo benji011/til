@@ -1,3 +1,4 @@
+* [During WW2 in 1940, John 'Cats Eyes' Cunningham shot down the first enemy plane using an 'AI' radar](https://en.wikipedia.org/wiki/John_Cunningham_(RAF_officer)) on August 14, 2023
 * [Its better to overload python function covariants instead Unionizing them for higher precision](https://medium.com/analytics-vidhya/making-sense-of-typing-overload-437e6deecade) on July 30, 2023
 * [You can re-order your commit history using git rebase interactive](https://dev.to/benji011/til-you-can-re-order-your-commit-history-through-rebase-i-35kn) on June 13, 2023
 - [You can convert media file extensions with `ffmpeg`](https://dev.to/benji011/til-you-can-convert-media-file-extensions-with-ffmpeg-1ibc) on May 28, 2023
