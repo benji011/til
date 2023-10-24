@@ -1,3 +1,4 @@
+* [GitLab defaults its content to be 1280px wide, but you can change this using the Fluid option](https://docs.gitlab.com/ee/user/profile/preferences.html#layout-width) on October 24, 2023
 * [You can add a breakpoint in pytest using `--pdb`](https://www.oreilly.com/library/view/python-testing-with/9781680509427/f_0150.xhtml) on September 26, 2023
 * [During WW2 in 1940, John 'Cats Eyes' Cunningham shot down the first enemy plane using an 'AI' radar](https://en.wikipedia.org/wiki/John_Cunningham_(RAF_officer)) on August 14, 2023
 * [Its better to overload python function covariants instead Unionizing them for higher precision](https://medium.com/analytics-vidhya/making-sense-of-typing-overload-437e6deecade) on July 30, 2023
