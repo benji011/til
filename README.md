@@ -1,3 +1,4 @@
+* [You can revert back to Slacks old UI even if it's the desktop app](https://www.reddit.com/r/Slack/comments/16ib0l7/comment/k0kfpc8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) on November 10, 2023
 * [GitLab defaults its content to be 1280px wide, but you can change this using the Fluid option](https://docs.gitlab.com/ee/user/profile/preferences.html#layout-width) on October 24, 2023
 * [You can add a breakpoint in pytest using `--pdb`](https://www.oreilly.com/library/view/python-testing-with/9781680509427/f_0150.xhtml) on September 26, 2023
 * [During WW2 in 1940, John 'Cats Eyes' Cunningham shot down the first enemy plane using an 'AI' radar](https://en.wikipedia.org/wiki/John_Cunningham_(RAF_officer)) on August 14, 2023
