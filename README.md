@@ -1,3 +1,4 @@
+* [You can turn off Google AI overview by adding &udm=14 as a URL parameter](https://arstechnica.com/gadgets/2024/05/google-searchs-udm14-trick-lets-you-kill-ai-search-for-good/) on May 30, 2024
 * [The meaning of Tautological](https://en.wikipedia.org/wiki/List_of_tautological_place_names) on May 29, 2024
 * [You can restore deleted files from a commit and then apply a git fixup to update the changes of that commit instead](https://dev.to/benji011/til-you-can-restore-deleted-files-from-a-commit-and-then-apply-a-git-fixup-to-update-the-changes-of-that-commit-instead-5f0k) on May 17, 2024
 * [You can revert back to Slacks old UI even if it's the desktop app](https://www.reddit.com/r/Slack/comments/16ib0l7/comment/k0kfpc8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) on November 10, 2023
