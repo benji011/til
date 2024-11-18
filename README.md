@@ -1,3 +1,4 @@
+* [Django's transaction.atomic context manager can prevent multiple/nested atomic blocks from being committed using the durable flag](https://docs.djangoproject.com/en/dev/topics/db/transactions/#controlling-transactions-explicitly) on November 18, 2024
 * [How to transfer my payslips from my work computer to my home laptop using Tailscale](https://tailscale.com/) on August 02, 2024
 * [You can experience Windows XP again through your browser via RebornXP](https://rebornxp.js.org/) on July 04, 2024
 * [You can inspect each layer in a Docker image using `dive`](https://github.com/wagoodman/dive) on July 03, 2024
