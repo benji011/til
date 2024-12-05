@@ -1,3 +1,4 @@
+* [You can stage specific hunks interactively in your file(s) using `git add -p`](https://stackoverflow.com/a/6290646/4477547) on December 05, 2024
 * [You can see the entire commit column on GitLab using JS as a bookmark](https://dev.to/benji011/til-how-to-see-the-entire-commit-column-on-gitlab-using-js-518m) on November 27, 2024
 * [Django's transaction.atomic context manager can prevent multiple/nested atomic blocks from being committed using the durable flag](https://docs.djangoproject.com/en/dev/topics/db/transactions/#controlling-transactions-explicitly) on November 18, 2024
 * [How to transfer my payslips from my work computer to my home laptop using Tailscale](https://tailscale.com/) on August 02, 2024
