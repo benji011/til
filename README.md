@@ -1,3 +1,4 @@
+* [How to profile the `zsh` start time](https://stevenvanbael.com/profiling-zsh-startup) on January 16, 2025
 * [The `requests` library supports automatic retries with exponential backoff ](https://dev.to/benji011/til-that-the-requests-library-supports-automatic-retries-with-exponential-backoff-2b6d) on December 06, 2024
 * [You can stage specific hunks interactively in your file(s) using `git add -p`](https://stackoverflow.com/a/6290646/4477547) on December 05, 2024
 * [You can see the entire commit column on GitLab using JS as a bookmark](https://dev.to/benji011/til-how-to-see-the-entire-commit-column-on-gitlab-using-js-518m) on November 27, 2024
