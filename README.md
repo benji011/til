@@ -1,3 +1,4 @@
+* [You can output `aws ecr describe-images` as a table](https://dev.to/benji011/til-you-can-output-aws-ecr-describe-images-as-a-table-3f4g) on June 09, 2025
 * [Automate mundane routines with MacOS Folder Actions](https://interfacecraft.online/posts/blog/2025/how-i-automated-my-computer-life-with-macos-folder-actions/) on February 14, 2025
 * [You can apply `git fixup` automatically with `git absorb`](https://dev.to/benji011/til-you-can-apply-git-fixup-automatically-with-git-absorb-44hk) on January 23, 2025
 * [How to profile the `zsh` start time](https://dev.to/benji011/til-how-to-profile-zsh-start-time-2bob) on January 16, 2025
