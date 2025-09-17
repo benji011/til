@@ -1,3 +1,4 @@
+* [How to make auto-hide/show for the dock faster](https://apple.stackexchange.com/a/70598) on September 17, 2025
 * [You can make GitHub Copilot obey coding & formatting conventions using a markdown file](https://www.linkedin.com/posts/ryanvarley_i-used-github-copilot-agent-mode-while-coding-activity-7351573955138187266-nl5r/) on July 25, 2025
 * [You can output `aws ecr describe-images` as a table](https://dev.to/benji011/til-you-can-output-aws-ecr-describe-images-as-a-table-3f4g) on June 09, 2025
 * [Automate mundane routines with MacOS Folder Actions](https://interfacecraft.online/posts/blog/2025/how-i-automated-my-computer-life-with-macos-folder-actions/) on February 14, 2025
