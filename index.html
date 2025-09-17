@@ -101,7 +101,13 @@
     </footer>
   </body>
 </html>
-<script type="module" src="https://raw.githubusercontent.com/benji011/til-website/refs/heads/main/main.js"></script>
+<!-- Load marked.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Load markdown file and render
+    fetch('https://raw.githubusercontent.com/benji011/TIL_notes/refs/heads/main/README.md')
+        .then(response => response.text())
+        .then(markdown => {
+            document.getElementById('content').innerHTML = marked.parse(markdown);
+        });
 </script>
