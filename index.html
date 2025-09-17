@@ -108,6 +108,6 @@
     fetch('https://raw.githubusercontent.com/benji011/TIL_notes/refs/heads/main/README.md')
         .then(response => response.text())
         .then(markdown => {
-            document.getElementById('content').innerHTML = marked.parse(markdown);
+            document.getElementById('readme').innerHTML = marked.parse(markdown);
         });
 </script>
