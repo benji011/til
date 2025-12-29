@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2024-12-05-you-can-stage-specific-hunks-interactively-in-your-file-s-using-git-add-p/" />
+    <title>You can stage specific hunks interactively in your file(s) using `git add -p`</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>You can stage specific hunks interactively in your file(s) using `git add -p`</h1>
+        <div>
+                <time>December 5, 2024</time>
+            </div>
+    </header><p>Instead of staging entire files, <code>git add -p</code> (or <code>--patch</code>) lets you interactively review and stage individual chunks (hunks) of changes. This is perfect for creating focused, logical commits from a file with mixed changes.</p>
+<p><strong>Usage:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add -p <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Git will show each hunk and prompt you with options:</p>
+<p><strong>Common options:</strong></p>
+<ul>
+<li><code>y</code> - Stage this hunk</li>
+<li><code>n</code> - Don&rsquo;t stage this hunk</li>
+<li><code>s</code> - Split into smaller hunks</li>
+<li><code>e</code> - Manually edit the hunk</li>
+<li><code>q</code> - Quit (don&rsquo;t stage this or remaining hunks)</li>
+<li><code>?</code> - Show help for all options</li>
+</ul>
+<p><strong>Example scenario:</strong></p>
+<p>You have a file with both bug fixes and new features. Using <code>git add -p</code>, you can:</p>
+<ol>
+<li>Stage only the bug fix hunks → commit them separately</li>
+<li>Stage the feature hunks → commit them as a different logical change</li>
+</ol>
+<p><strong>Why use it:</strong></p>
+<ul>
+<li>Create clean, focused commits</li>
+<li>Separate unrelated changes in the same file</li>
+<li>Review each change before staging</li>
+<li>Build a more readable git history</li>
+<li>Make code reviews easier by grouping related changes</li>
+</ul>
+<p><strong>Split large hunks:</strong></p>
+<p>If Git&rsquo;s hunks are too large, use <code>s</code> to split them into smaller pieces, or <code>e</code> to manually edit which lines to stage.</p>
+<p>This approach encourages better commit hygiene and makes it easier to revert specific changes later without affecting unrelated code.</p>
+<p><a href="https://stackoverflow.com/a/6290646/4477547">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

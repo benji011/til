@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2023-04-21-you-can-create-a-shell-alias-to-show-your-local-git-branches-in-a-table-instead-of-a-long-list/" />
+    <title>You can create a shell alias to show your local Git branches in a table instead of a long list</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>You can create a shell alias to show your local Git branches in a table instead of a long list</h1>
+        <div>
+                <time>April 21, 2023</time>
+            </div>
+    </header><p>Instead of scrolling through a long list of git branches, you can create a shell alias that displays them in a clean, formatted table with useful information like commit date and author.</p>
+<p>Here&rsquo;s the alias:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>alias gb<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;git --no-pager branch --sort=committerdate --format=&#34;%(color:yellow)%(refname:short)%09%(color:green)%(committerdate:relative)%09%(color:red)[%(authorname)]&#34; --color=always | column -t -s$&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#39;&#39;</span>
+</span></span></code></pre></div><p>Add this to your <code>~/.bashrc</code>, <code>~/.zshrc</code>, or equivalent shell configuration file.</p>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Lists all git branches sorted by most recent commit date</li>
+<li>Displays three color-coded columns:
+<ul>
+<li>Branch name (yellow)</li>
+<li>Relative commit date (green)</li>
+<li>Author name (red)</li>
+</ul>
+</li>
+<li>Uses <code>column</code> to align everything into neat, tab-separated columns</li>
+</ul>
+<p>Instead of a simple list, you&rsquo;ll see a formatted table showing when each branch was last updated and who worked on it - perfect for quickly identifying stale branches or finding recent work.</p>
+<p><a href="https://gist.github.com/benji011/8210b3eeda1b80935b87be3026c6a40e">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

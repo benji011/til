@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2024-11-27-you-can-see-the-entire-commit-column-on-gitlab-using-js-as-a-bookmark/" />
+    <title>You can see the entire commit column on GitLab using JS as a bookmark</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>You can see the entire commit column on GitLab using JS as a bookmark</h1>
+        <div>
+                <time>November 27, 2024</time>
+            </div>
+    </header><p>GitLab&rsquo;s CI/CD pipeline view often truncates commit messages in a narrow column. You can create a bookmarklet to expand the column and see full commit text with one click.</p>
+<p><strong>Create a bookmark with this JavaScript:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:</span>(<span style="color:#66d9ef">function</span>(){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">e</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;a.commit-sha.mr-0&#39;</span>);<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">t</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">t</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">t</span><span style="color:#f92672">++</span>){<span style="color:#a6e22e">e</span>[<span style="color:#a6e22e">t</span>].<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">e</span>[<span style="color:#a6e22e">t</span>]);}<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;div.container-limited&#39;</span>);<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>){<span style="color:#a6e22e">n</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">maxWidth</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2400px&#39;</span>;}<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">r</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;a.ref-name&#39;</span>);<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">t</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">t</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">t</span><span style="color:#f92672">++</span>){<span style="color:#a6e22e">r</span>[<span style="color:#a6e22e">t</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">overflow</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;unset&#39;</span>;}})();
+</span></span></code></pre></div><p><strong>What it does:</strong></p>
+<p>When you click this bookmark while viewing GitLab&rsquo;s pipelines page, it:</p>
+<ol>
+<li><strong>Removes constraining elements</strong> - Deletes elements that limit the commit column width</li>
+<li><strong>Expands container width</strong> - Increases the max-width to 2400px (from the default ~1280px)</li>
+<li><strong>Reveals hidden text</strong> - Sets overflow to &lsquo;unset&rsquo; on ref-name elements</li>
+</ol>
+<p><strong>How to use it:</strong></p>
+<ol>
+<li>Create a new bookmark in your browser</li>
+<li>Name it &ldquo;Expand GitLab Commits&rdquo;</li>
+<li>Paste the JavaScript code above as the URL</li>
+<li>Navigate to any GitLab pipeline page</li>
+<li>Click the bookmark to expand the commit column</li>
+</ol>
+<p>This is particularly useful when reviewing pipelines with descriptive commit messages that get truncated in the default narrow layout.</p>
+<p><a href="https://dev.to/benji011/til-how-to-see-the-entire-commit-column-on-gitlab-using-js-518m">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

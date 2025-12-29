@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2025-02-14-automate-mundane-routines-with-macos-folder-actions/" />
+    <title>Automate mundane routines with MacOS Folder Actions</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>Automate mundane routines with MacOS Folder Actions</h1>
+        <div>
+                <time>February 14, 2025</time>
+            </div>
+    </header><p>Folder Actions automatically run scripts when files are added, removed, or modified in specific folders on macOS.</p>
+<p><strong>How to set up:</strong></p>
+<ol>
+<li>Right-click a folder in Finder</li>
+<li>Select <strong>Services &gt; Folder Actions Setup</strong></li>
+<li>Enable folder actions for that folder</li>
+<li>Attach a script (AppleScript or shell script) to run on folder events</li>
+</ol>
+<p><strong>Common automation examples:</strong></p>
+<ul>
+<li><strong>Auto-organize downloads</strong>: Sort files into subfolders by type (PDFs to Documents, images to Pictures)</li>
+<li><strong>Image processing</strong>: Automatically resize or compress images when added to a folder</li>
+<li><strong>File conversion</strong>: Convert documents to different formats</li>
+<li><strong>Backup automation</strong>: Copy files to a backup location when modified</li>
+<li><strong>Notification system</strong>: Alert you when specific files appear</li>
+</ul>
+<p><strong>Example AppleScript:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#66d9ef">on</span> adding folder items <span style="color:#66d9ef">to</span> this_folder after receiving added_items
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">repeat</span> <span style="color:#66d9ef">with</span> this_item <span style="color:#66d9ef">in</span> added_items
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">-- Process each added file</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;Finder&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">-- Do something with this_item</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">tell</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">repeat</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> adding folder items <span style="color:#66d9ef">to</span>
+</span></span></code></pre></div><p><strong>Use cases:</strong></p>
+<ul>
+<li>Watch a &ldquo;Screenshots&rdquo; folder and auto-upload to cloud storage</li>
+<li>Monitor downloads for specific file types and move them automatically</li>
+<li>Process scanned documents as they&rsquo;re saved</li>
+<li>Auto-rename files based on patterns</li>
+</ul>
+<p>Built into macOS, no third-party tools needed.</p>
+<p><a href="https://interfacecraft.online/posts/blog/2025/how-i-automated-my-computer-life-with-macos-folder-actions/">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

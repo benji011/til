@@ -1,0 +1,5 @@
+<ul id="posts">
+{{- range site.RegularPages }}
+    {{ .Render "li" }}
+{{- end }}
+</ul>

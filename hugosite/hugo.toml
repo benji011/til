@@ -1,0 +1,20 @@
+baseURL = 'https://benji011.github.io/TIL_notes/'
+languageCode = 'en-us'
+title = 'Benjamin Lo | Senior Software Engineer'
+theme = 'etch'
+contentDir = '../posts'
+publishDir = '../docs'
+
+[params]
+  description = 'A catalogue of notable things I have learnt'
+  copyright = 'Ben Lo'
+  dark = 'off'
+
+[permalinks]
+  posts = '/:year/:month/:title/'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[taxonomies]
+  tag = 'tags'
