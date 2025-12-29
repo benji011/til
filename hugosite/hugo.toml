@@ -1,4 +1,4 @@
-baseURL = 'https://benji011.github.io/TIL_notes/'
+baseURL = 'https://benji011.github.io/til/'
 languageCode = 'en-us'
 title = 'Benjamin Lo | Senior Software Engineer'
 theme = 'etch'
