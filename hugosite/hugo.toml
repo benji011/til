@@ -10,9 +10,6 @@ publishDir = '../docs'
   copyright = 'Ben Lo'
   dark = 'off'
 
-[permalinks]
-  posts = '/:year/:month/:title/'
-
 [markup.goldmark.renderer]
   unsafe = true
 
