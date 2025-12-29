@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2023-04-22-using-to-compare-sensitive-hashes-leaves-you-open-for-timing-attacks-use-constant-time-algorithm-instead/" />
+    <title>Using `==` to compare sensitive hashes leaves you open for timing attacks, use constant-time algorithm instead</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>Using `==` to compare sensitive hashes leaves you open for timing attacks, use constant-time algorithm instead</h1>
+        <div>
+                <time>April 22, 2023</time>
+            </div>
+    </header><p>When comparing sensitive values like password hashes or authentication tokens, using standard string comparison (<code>==</code>) creates a security vulnerability. The comparison returns as soon as it finds a mismatch, and attackers can measure these tiny timing differences to gradually deduce the correct value.</p>
+<p><strong>The problem:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Vulnerable to timing attacks</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> user_hash <span style="color:#f92672">==</span> stored_hash:
+</span></span><span style="display:flex;"><span>    authenticate()
+</span></span></code></pre></div><p>If the first character doesn&rsquo;t match, the comparison exits immediately. If it matches, it continues to the second character. An attacker can measure response times to determine which characters are correct.</p>
+<p><strong>The solution:</strong></p>
+<p>Use a constant-time comparison that always checks every character, regardless of whether a mismatch is found:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> hmac
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Secure constant-time comparison</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> hmac<span style="color:#f92672">.</span>compare_digest(user_hash, stored_hash):
+</span></span><span style="display:flex;"><span>    authenticate()
+</span></span></code></pre></div><p>Python&rsquo;s <code>hmac.compare_digest()</code> takes the same amount of time whether the strings match or not, preventing attackers from using timing analysis to extract the secret value byte by byte.</p>
+<p>This is critical for comparing any security-sensitive values: password hashes, HMAC signatures, API tokens, or session identifiers.</p>
+<p><a href="https://codahale.com/a-lesson-in-timing-attacks/">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

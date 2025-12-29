@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2023-10-24-gitlab-defaults-its-content-to-be-1280px-wide-but-you-can-change-this-using-the-fluid-option/" />
+    <title>GitLab defaults its content to be 1280px wide, but you can change this using the Fluid option</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>GitLab defaults its content to be 1280px wide, but you can change this using the Fluid option</h1>
+        <div>
+                <time>October 24, 2023</time>
+            </div>
+    </header><p>By default, GitLab&rsquo;s page content is fixed at 1280 pixels wide, which can feel constraining on larger displays. You can switch to a fluid layout that stretches across your entire screen width.</p>
+<p><strong>To change the layout:</strong></p>
+<ol>
+<li>Select your avatar in the upper-right corner</li>
+<li>Choose <strong>Preferences</strong></li>
+<li>Scroll to the <strong>Behavior</strong> section</li>
+<li>Under <strong>Layout width</strong>, choose between:
+<ul>
+<li><strong>Fixed</strong>: Maintains the default 1280px width</li>
+<li><strong>Fluid</strong>: Stretches content across the entire page width</li>
+</ul>
+</li>
+<li>Click <strong>Save changes</strong></li>
+</ol>
+<p>The fluid layout is particularly useful when:</p>
+<ul>
+<li>Reviewing diffs with long lines of code</li>
+<li>Viewing wide tables or CI pipeline graphs</li>
+<li>Working on ultra-wide monitors</li>
+<li>Reading documentation with code examples</li>
+</ul>
+<p>This makes much better use of screen real estate on modern wide displays and reduces horizontal scrolling.</p>
+<p><a href="https://docs.gitlab.com/ee/user/profile/preferences.html#layout-width">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

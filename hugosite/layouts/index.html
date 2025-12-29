@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="section">
+    <div class="column">
+        <div class="container">
+            <h1 class="title">
+                About me
+            </h1>
+            <div class="content">
+                <p class="location-parent">
+                    <span class="icon">
+                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                    </span>
+                    <span>London, UK.</span>
+                </p>
+                <p class="is-size-6">
+                    I'm a software engineer with over 11 years of experience in Japan and in the UK, building scalable software systems and intelligent AI solutions. I specialize in developing AI agents that balance deterministic precision with adaptive, non-deterministic behavior, combining solid software architecture with practical innovation to create reliable, forward‑thinking products.
+                </p>
+                <p class="buttons">
+                    <button class="button" onclick="window.open('https://www.linkedin.com/in/benjamin-l-6b0ba11a/');">
+                        <span class="icon">
+                            <i class="fab fa-linkedin"></i>
+                        </span>
+                        <span>Linkedin</span>
+                    </button>
+                    <button class="button" onclick="window.open('https://github.com/benji011');">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </button>
+                </p>
+            </div>
+            <h1 class="title">
+                TIL
+            </h1>
+            <h2 class="subtitle is-size-6">
+                A curated list of things I've learned
+            </h2>
+            {{- partial "posts.html" . -}}
+        </div>
+    </div>
+</section>
+{{ end }}

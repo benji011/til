@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2025-06-09-you-can-output-aws-ecr-describe-images-as-a-table/" />
+    <title>You can output `aws ecr describe-images` as a table</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>You can output `aws ecr describe-images` as a table</h1>
+        <div>
+                <time>June 9, 2025</time>
+            </div>
+    </header><p>Instead of parsing JSON output from AWS ECR commands, you can format the results as a readable table using the <code>--output table</code> flag.</p>
+<p><strong>Default JSON output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws ecr describe-images --repository-name my-repo --region us-east-1
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Returns verbose JSON</span>
+</span></span></code></pre></div><p><strong>Table output:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws ecr describe-images <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --repository-name my-repo <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --region us-east-1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --query <span style="color:#e6db74">&#39;sort_by(imageDetails,&amp;imagePushedAt)[-1]&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --output table
+</span></span></code></pre></div><p><strong>What you get:</strong></p>
+<p>Instead of JSON blobs, you&rsquo;ll see a cleanly formatted table with:</p>
+<ul>
+<li>Column headers</li>
+<li>Aligned values</li>
+<li>Much better readability</li>
+<li>Easy scanning of image details</li>
+</ul>
+<p><strong>Other useful &ndash;output options:</strong></p>
+<ul>
+<li><code>table</code> - Human-readable table format</li>
+<li><code>text</code> - Tab-delimited text</li>
+<li><code>json</code> - Default JSON format (verbose)</li>
+<li><code>yaml</code> - YAML format</li>
+</ul>
+<p><strong>Combining with &ndash;query:</strong></p>
+<p>The <code>--query</code> parameter lets you filter and sort results using JMESPath:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Get the most recently pushed image</span>
+</span></span><span style="display:flex;"><span>--query <span style="color:#e6db74">&#39;sort_by(imageDetails,&amp;imagePushedAt)[-1]&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get only specific fields</span>
+</span></span><span style="display:flex;"><span>--query <span style="color:#e6db74">&#39;imageDetails[*].[imageTags[0],imagePushedAt]&#39;</span>
+</span></span></code></pre></div><p>This makes it much easier to quickly check image details, tags, and push dates without writing JSON parsing scripts.</p>
+<p><a href="https://dev.to/benji011/til-you-can-output-aws-ecr-describe-images-as-a-table-3f4g">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Hugo
+.hugo_build.lock
+hugosite/resources/
+hugosite/public/
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

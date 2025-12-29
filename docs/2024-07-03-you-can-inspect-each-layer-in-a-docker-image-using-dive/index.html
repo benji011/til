@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/TIL_notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=TIL_notes/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalogue of notable things I have learnt">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="http://localhost:1313/TIL_notes/favicon.ico">
+    
+    <link rel="stylesheet" href="/TIL_notes/css/style.min.css">
+
+    <link rel="canonical" href="http://localhost:1313/TIL_notes/2024-07-03-you-can-inspect-each-layer-in-a-docker-image-using-dive/" />
+    <title>You can inspect each layer in a Docker image using `dive`</title>
+</head>
+<body>
+        <div id="wrapper"><section class="hero is-medium is-link">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                <i class="fas fa-laptop-code"></i> Benji
+            </h1>
+            <h2 class="subtitle">
+                Lead Senior Software Engineer <a class="has-text-white is-underlined has-text-weight-bold" href="https://www.aveni.ai/" target="_blank">@Aveni.ai</a>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<article>
+    <header id="post-header">
+        <h1>You can inspect each layer in a Docker image using `dive`</h1>
+        <div>
+                <time>July 3, 2024</time>
+            </div>
+    </header><p>Dive is a command-line tool that lets you explore Docker images layer-by-layer, showing exactly what each layer adds, modifies, or removes. It&rsquo;s perfect for understanding image structure and identifying ways to reduce image size.</p>
+<p><strong>Installation:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># macOS</span>
+</span></span><span style="display:flex;"><span>brew install dive
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Linux (various package managers available)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Or via Docker</span>
+</span></span><span style="display:flex;"><span>docker pull wagoodman/dive
+</span></span></code></pre></div><p><strong>Basic usage:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dive &lt;image-name&gt;
+</span></span></code></pre></div><p><strong>What it shows:</strong></p>
+<ul>
+<li><strong>Layer-by-layer breakdown</strong>: View image contents organized by individual layers</li>
+<li><strong>Change tracking</strong>: Visual indicators show which files were added, removed, or modified</li>
+<li><strong>Efficiency analysis</strong>: Identifies wasted space and provides a percentage score</li>
+<li><strong>Size impact</strong>: See how much each layer contributes to the total image size</li>
+</ul>
+<p><strong>Build and analyze in one command:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dive build -t my-image:latest .
+</span></span></code></pre></div><p><strong>CI/CD integration:</strong></p>
+<p>Set efficiency thresholds to fail builds with bloated images:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CI<span style="color:#f92672">=</span>true dive &lt;image-name&gt;
+</span></span></code></pre></div><p>This tool is invaluable for optimizing Dockerfiles, understanding why images are large, and catching unnecessary files that accidentally made it into production images.</p>
+<p><a href="https://github.com/wagoodman/dive">Original source</a></p>
+</article>
+
+        </div><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Benjamin Lo</strong><br>
+            Lead Senior Software Engineer<br>
+            <a href="https://github.com/benji011">github.com/benji011</a>
+        </p>
+        <p>
+            © <span id="current-year"></span> Benjamin Lo. All rights reserved.
+        </p>
+    </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>

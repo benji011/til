@@ -1,0 +1,190 @@
+/* Match reference site styling exactly */
+.is-medium {
+    background-color: #1C2238 !important;
+}
+
+/* Override Etch theme's 62.5% base to match Bulma's 16px */
+html {
+    font-size: 16px !important;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    font-size: 1rem !important;
+}
+
+#wrapper {
+    flex: 1;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Ensure Bulma font sizes are used, not Etch theme overrides */
+.content p {
+    font-size: 1rem !important;
+    color: #4a4a4a !important;
+}
+
+main#content p {
+    font-size: 1rem !important;
+    color: #4a4a4a !important;
+}
+
+/* Override Etch theme's post list styling */
+main#content ul#posts {
+    font-size: 1rem !important;
+}
+
+main#content ul#posts li a {
+    color: #3273dc !important;
+}
+
+main#content ul#posts li a small,
+main#content ul#posts small,
+ul#posts li a small,
+main#content ul#posts li small {
+    font-size: 0.875em !important;
+    color: #999999 !important;
+}
+
+main#content ul#posts li a:hover small {
+    color: #999999 !important;
+}
+
+main#content ul#posts li a:hover {
+    color: #3273dc !important;
+    text-decoration: underline !important;
+}
+
+/* Force dates to be grey - ultra specific */
+ul#posts li a small time,
+main#content ul#posts li a small time {
+    color: #999999 !important;
+}
+
+/* Style inline code in post titles to match Bulma */
+main#content ul#posts li a code {
+    background-color: #f5f5f5;
+    color: #da1039;
+    font-size: 0.875em;
+    font-weight: 400;
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+}
+
+/* Ensure code tags don't break link styling */
+main#content ul#posts li a:hover code {
+    background-color: #f5f5f5;
+    color: #da1039;
+}
+
+/* Make container wider to match reference site */
+@media screen and (min-width: 770px) {
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .container {
+        max-width: 960px !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1200px !important;
+        width: 100% !important;
+    }
+
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1216px) {
+    .container {
+        max-width: 1400px !important;
+        width: 100% !important;
+    }
+
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Post page styling */
+article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+article header#post-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+article header#post-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #363636;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+}
+
+article header#post-header time {
+    color: #999999;
+    font-size: 0.875rem;
+}
+
+/* Ensure article content has proper spacing */
+article p {
+    margin-bottom: 1rem;
+}
+
+article h2, article h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Style code blocks in articles */
+article .highlight {
+    margin: 1.5rem 0;
+}
+
+/* Fix font size for code blocks (override theme's 1.4rem which becomes huge with 16px base) */
+article .highlight pre,
+article pre code,
+.highlight pre,
+.highlight code {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+}
+
+/* Reset Bulma's .number styling inside code blocks */
+.highlight .number {
+    all: unset !important;
+    font-family: inherit !important;
+    color: inherit !important;
+}
+
+/* Style inline code only (not code blocks) */
+article :not(pre) > code {
+    background-color: #f5f5f5;
+    color: #da1039;
+    font-size: 0.875em;
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+}
