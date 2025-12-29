@@ -1,3 +1,4 @@
+* [You can create a separate `.gitignore` that doesnt need to be committed into a repo](https://dev.to/fronkan/a-personal-gitignore-even-for-a-single-repository-4o7h) on December 29, 2025
 * [`nohup` runs processes immune to hangup signals, allowing them to survive terminal closure](https://dev.to/benji011/til-about-the-command-nohup-2h21) on December 23, 2025
 * [You can install plugins on Obsidian, like Excalidraw](https://forum.obsidian.md/t/excalidraw-full-featured-sketching-plugin-in-obsidian/17367) on December 04, 2025
 * [How to make auto-hide/show for the dock faster](https://apple.stackexchange.com/a/70598) on September 17, 2025
