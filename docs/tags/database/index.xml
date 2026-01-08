@@ -2,13 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on Benjamin Lo | Senior Software Engineer</title>
-    <link>https://benji011.github.io/til/tags/database/</link>
+    <link>http://localhost:1313/til/tags/database/</link>
     <description>Recent content in Database on Benjamin Lo | Senior Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Nov 2024 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://benji011.github.io/til/tags/database/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/til/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     
     
     

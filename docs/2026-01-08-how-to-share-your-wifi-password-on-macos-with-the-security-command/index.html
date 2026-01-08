@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="http://localhost:1313/til/favicon.ico">
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/til/tags/performance/index.xml" title="Benjamin Lo | Senior Software Engineer">
     
     <link rel="stylesheet" href="/til/css/style.min.css">
 
-    <link rel="canonical" href="http://localhost:1313/til/tags/performance/" />
-    <title>Performance</title>
+    <link rel="canonical" href="http://localhost:1313/til/2026-01-08-how-to-share-your-wifi-password-on-macos-with-the-security-command/" />
+    <title>How to share your wifi password on MacOS with the security command</title>
 </head>
 <body>
         <div id="wrapper"><section class="hero is-medium is-link">
@@ -28,23 +27,18 @@
     </div>
 </section>
 
-<h3>Performance</h3>
-<ul id="posts">
-    <li>
-    <a href="http://localhost:1313/til/2025-09-17-how-to-make-auto-hide-show-for-the-dock-faster/">
-        How to make auto-hide/show for the dock faster
-        <small><time>Sep 17, 2025</time></small>
-    </a>
-</li>
-
-    <li>
-    <a href="http://localhost:1313/til/2025-01-16-how-to-profile-the-zsh-start-time/">
-        How to profile the <code>zsh</code> start time
-        <small><time>Jan 16, 2025</time></small>
-    </a>
-</li>
-
-</ul>
+<article>
+    <header id="post-header">
+        <h1>How to share your wifi password on MacOS with the security command</h1>
+        <div>
+                <time>January 8, 2026</time>
+            </div>
+    </header><p>On MacOS there is a utility command called <code>security</code> that can retrieve passwords stored in the Keychain. The command in question works like this:</p>
+<pre tabindex="0"><code>security find-generic-password -wa &lt;your-wifi-name&gt;
+</code></pre><p>You combine it with <code>find-generic-password</code> to search for a generic password entry in your keychain. The latter <code>-wa</code> means to print only the password and the account name (and nothing else like metadata).</p>
+<p>The suffix is of course your wifi service name. Note that this only works if you&rsquo;ve connected to that service before.</p>
+<p>This is useful if you want to share that password with somebody else.</p>
+</article>
 
         </div><footer class="footer">
     <div class="content has-text-centered">

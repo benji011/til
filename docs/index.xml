@@ -2,13 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Benjamin Lo | Senior Software Engineer</title>
-    <link>https://benji011.github.io/til/</link>
+    <link>http://localhost:1313/til/</link>
     <description>Recent content on Benjamin Lo | Senior Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Dec 2025 01:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://benji011.github.io/til/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/til/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     
     
     
