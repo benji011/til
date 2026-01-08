@@ -6,7 +6,7 @@ tags: []
 
 On MacOS there is a utility command called `security` that can retrieve passwords stored in the Keychain. The command in question works like this:
 
-```
+```bash
 security find-generic-password -wa <your-wifi-name>
 ```
 
