@@ -10,8 +10,8 @@
     
     <link rel="stylesheet" href="/til/css/style.min.css">
 
-    <link rel="canonical" href="https://benji011.github.io/til/2026-01-08-how-to-share-your-wifi-password-on-macos-with-the-security-command/" />
-    <title>How to share your wifi password on MacOS with the security command</title>
+    <link rel="canonical" href="https://benji011.github.io/til/2026-01-18-mitigate-the-cost-of-context-switching-using-claude-codes-add-dir-command/" />
+    <title>Mitigate the cost of context switching using Claude Codes `/add-dir` command</title>
 </head>
 <body>
         <div id="wrapper"><section class="hero is-medium is-link">
@@ -29,15 +29,21 @@
 
 <article>
     <header id="post-header">
-        <h1>How to share your wifi password on MacOS with the security command</h1>
+        <h1>Mitigate the cost of context switching using Claude Codes `/add-dir` command</h1>
         <div>
-                <time>January 8, 2026</time>
+                <time>January 18, 2026</time>
             </div>
-    </header><p>On MacOS there is a utility command called <code>security</code> that can retrieve passwords stored in the Keychain. The command in question works like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>security find-generic-password -wa &lt;your-wifi-name&gt;
-</span></span></code></pre></div><p>You combine it with <code>find-generic-password</code> to search for a generic password entry in your keychain. The latter <code>-wa</code> means to print only the password and the account name (and nothing else like metadata).</p>
-<p>The suffix is of course your wifi service name. Note that this only works if you&rsquo;ve connected to that service before.</p>
-<p>This is useful if you want to share that password with somebody else.</p>
+    </header><p>Claude Code provides a useful <code>/add-dir</code> slash command to add additional working directories to your current workflow. In my case, I&rsquo;ve found this to be useful when I need to change or add new environment variables in another repo that happens to be the infrastructure of my current working application.</p>
+<p>The command looks something like below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/add-dir /path/to/your/infrastructure-repo
+</span></span></code></pre></div><p>Context is saved in this current session (assuming you choose this option vs the others shown below), you make your changes on your infrastructure repo, submit your PR and then and is then when you&rsquo;re done with the whole session all context is automatically removed for you.</p>
+<p>It&rsquo;s also worth noting there are other use cases, e.g. what if you want to investigate what and where something had went wrong in production across multiple repos.</p>
+<p><img src="/til/cc_add-dir.png" alt="cc_add-dir.png"></p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://qiita.com/nakamasato/items/97ba0a6119b3f4b5f2e9">https://qiita.com/nakamasato/items/97ba0a6119b3f4b5f2e9</a></li>
+<li><a href="https://code.claude.com/docs/en/slash-commands">https://code.claude.com/docs/en/slash-commands</a></li>
+</ul>
 </article>
 
         </div><footer class="footer">
